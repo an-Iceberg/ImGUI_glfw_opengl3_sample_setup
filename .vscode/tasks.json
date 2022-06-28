@@ -1,0 +1,67 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "debug build",
+      "command": "C:/msys64/mingw64/bin/g++.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "${workspaceFolder}\\include\\*.cpp",
+        "${workspaceFolder}\\src\\**",
+        "-o",
+        "${workspaceFolder}\\build\\debug\\MyImGUIApp.exe",
+        "-I",
+        "${workspaceFolder}\\include",
+        "-lmingw32",
+        "-lglfw3",
+        "-lglfw3dll",
+        "-lopengl32",
+        "-lgdi32",
+        "-luser32",
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+    },
+    {
+      "type": "cppbuild",
+      "label": "release build",
+      "command": "C:/msys64/mingw64/bin/g++.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "${workspaceFolder}\\include\\*.cpp",
+        "${workspaceFolder}\\src\\**",
+        "-o",
+        "${workspaceFolder}\\build\\release\\MyImGUIApp.exe",
+        "-O3",
+        "-I",
+        "${workspaceFolder}\\include",
+        "-lmingw32",
+        "-lglfw3",
+        "-lglfw3dll",
+        "-lopengl32",
+        "-lgdi32",
+        "-luser32",
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+    }
+  ]
+}
